@@ -29,17 +29,11 @@ Building in Blender still means menus, mouse miles and copy-pasted Python snippe
 
 Open PowerShell, copy a command, paste it and press Enter—every command below is self-contained and needs no preparation.
 
-1. Grab the release ZIP `blender-ai-copilot-studio.zip` from [Download][download-url] and save it to your Windows machine.
-2. Confirm the installed Blender binary and its version folder on a standard Windows setup, then in Blender open **Edit → Preferences → Get Extensions → the ⋮ menu → Install from Disk**.
-   `powershell Get-ChildItem $env:ProgramFiles\Blender*\Blender*\blender.exe`
-3. Select the downloaded ZIP in the installer, enable **blender-ai-copilot-studio**, and open the panel **3D Viewport → N → Copilot Studio**; the command opens your Downloads folder so the ZIP is one click away.
-   `powershell Invoke-Item $env:USERPROFILE\Downloads`
-4. Choose a provider—OpenAI, Anthropic Claude, Google Gemini, OpenRouter, OpenCode Zen, Ollama or a custom API—add your connection details and select a model with tool-calling support; the command checks a local Ollama server when that is your provider.
-   `powershell Invoke-RestMethod http://localhost:11434/api/tags`
-5. Send a message in Blender or click **Open Studio Window**; the command confirms Blender is running before you start.
-   `powershell Get-Process blender`
-6. Mind the runtime profile: the release bundle targets Windows x64 with Blender 4.2 or later, and Blender must stay open while you use Studio or an external client; when the built-in MCP server is enabled, the command confirms its local endpoint.
-   `powershell Test-NetConnection 127.0.0.1 -Port 9876`
+1. Download **`mcp-for-blender-pro.zip`** from [Releases](../../releases/latest).
+2. In Blender, open **Edit → Preferences → Get Extensions → menu → Install from Disk**.
+3. Select the ZIP, enable **mcp-for-blender-pro**, then open **3D Viewport → N → MCP Pro**.
+4. Choose a provider, add your connection details and select a model.
+5. Send a message in Blender or click **Open Studio Window**.
 
 ## Features
 
